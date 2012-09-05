@@ -18,6 +18,9 @@ group :assets do
   gem 'therubyracer', :platforms => :ruby
 
   gem 'uglifier', '>= 1.0.3'
+
+  gem 'bourbon'
+  gem 'neat', '~> 0.4.2'
 end
 
 gem 'jquery-rails'
