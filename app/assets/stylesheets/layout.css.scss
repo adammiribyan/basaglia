@@ -1,0 +1,12 @@
+
+div.container {
+  @include outer-container;
+}
+
+aside.sidebar {
+  @include span-columns(4);
+}
+
+section.main {
+  @include span-columns(8);
+}

@@ -8,7 +8,11 @@
 </head>
 <body class="<%= [controller_name, action_name].join(" ") %>">
   <div class="container">
-    <%= yield %>
+    <header class="header">Header</header>
+    <aside class="sidebar">Sidebar</aside>
+    <section class="main">
+      <%= yield %>
+    </section>
   </div>
 
 </body>
