@@ -1,0 +1,84 @@
+body {
+  background: #cbcbcb fixed repeat url("/assets/background.jpg");
+}
+
+div.container {
+  @include outer-container;
+}
+
+aside.sidebar, section.main {
+  margin-top: $gutter * 2;
+}
+
+aside.sidebar {
+  @include span-columns(4);
+}
+
+section.main {
+  @include fill-parent;
+}
+
+nav.pages {
+  @include shift(4);
+  @include box-shadow(rgba(0, 0, 0, 0.1) 0 0 10px);
+  @include border-radius(4px);
+  width: em(605);
+
+  & > ul {
+    list-style: none;
+    position: relative;
+    padding: 0;
+    margin: 0;
+    letter-spacing: em(-4);
+    word-spacing: em(-4);
+
+
+    li {
+      @include inline-block;
+      border-right: 1px solid #f2f2f2;
+      letter-spacing: normal;
+      word-spacing: normal;
+      text-align: center;
+      width: em(115);
+
+      &:last-child {
+        border-right: none;
+      }
+
+      & > a {
+        color: white;
+        background-color: #ddd6cf;
+        cursor: pointer;
+        display: block;
+        font-size: em(15);
+        font-weight: bold;
+        line-height: 3em;
+        height: 3em;
+        text-decoration: none;
+        text-align: center;
+        @include transition(opacity 0.3s ease-in 0s);
+      }
+
+      & > a:hover {
+        opacity: 0.75;
+      }
+    }
+
+    li.selected > a {
+      opacity: 0.75;
+    }
+
+    li.trainings > a {
+      border-bottom-left-radius: 4px;
+    }
+
+    li.feedback {
+      width: em(145);
+
+      & > a {
+        border-bottom-right-radius: 4px;
+      }
+    }
+
+  }
+}

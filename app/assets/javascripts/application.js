@@ -13,4 +13,5 @@
 //= require jquery
 //= require jquery_ujs
 //= require modernizr
+//= require jquery.reveal
 //= require_tree .
