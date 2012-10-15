@@ -8,13 +8,13 @@ ru:
       header: "Тренинги"
     publications:
       title: "Публикации"
-      header: "Публикации"
+      header: "Ссылки на статьи и публикации авторов тренинга"
     reviews:
       title: "Отзывы"
       header: "Отзывы"
     contact-us:
       title: "Контакты"
-      header: "Контакты"
+      header: "Как с нами связаться"
     feedback:
       title: "Обратная связь"
       header: "Обратная связь"

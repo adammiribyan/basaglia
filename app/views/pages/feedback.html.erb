@@ -1,0 +1,15 @@
+<% title t("pages.feedback.title") %>
+
+<h1><%= t("pages.feedback.header") %></h1>
+
+<%= simple_form_for :feedback, url: send_feedback_path do |f| %>
+  <fieldset>
+    <%= f.input :message, as: :text, label: false, required: false, autofocus: true %>
+    <%= f.input :name, required: false, input_html: { class: "short" } %>
+    <%= f.input :phone_or_email, required: false, input_html: { class: "short" } %>
+  </fieldset>
+
+  <div class="actions">
+    <%= f.submit "Отправить", class: "dark button" %>
+  </div>
+<% end %>

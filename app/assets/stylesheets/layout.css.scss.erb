@@ -16,13 +16,15 @@ aside.sidebar {
 
 section.main {
   @include fill-parent;
+  padding-bottom: 2.85em;
 }
 
 nav.pages {
   @include shift(4);
   @include box-shadow(rgba(0, 0, 0, 0.1) 0 0 10px);
   @include border-radius(4px);
-  width: em(605);
+  width: em(484);
+  // width: em(605);
 
   & > ul {
     list-style: none;
@@ -81,4 +83,8 @@ nav.pages {
     }
 
   }
+}
+
+.clearfix {
+  @include row(block);
 }

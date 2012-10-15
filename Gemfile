@@ -28,6 +28,8 @@ gem 'jquery-rails'
 # Forms
 gem 'simple_form'
 
+gem 'mail_form'
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
@@ -42,6 +44,8 @@ gem 'capistrano'
 
 group :development do
   gem 'letter_opener'
+  gem 'guard'
+  gem 'guard-livereload'
 end
 
 # To use debugger

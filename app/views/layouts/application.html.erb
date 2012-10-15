@@ -11,7 +11,7 @@
     <header class="header">
       <nav class="pages">
         <ul>
-          <% %w(trainings publications reviews contact-us feedback).each do |page_name| %>
+          <% %w(trainings publications contact-us feedback).each do |page_name| %>
             <li class="<%= page_name %> <%= "selected" if params[:id] == page_name %>"><%= link_to t("pages.#{page_name}.title"), page_path(page_name) %></li>
           <% end %>
         </ul>

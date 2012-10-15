@@ -13,6 +13,17 @@ class PagesController < ApplicationController
     render template: current_page
   end
 
+  def send_feedback
+    @feedback = Feedback.new(
+      name: params[:feedback][:name],
+      phone_or_email: params[:feedback][:phone_or_email],
+      message: params[:feedback][:message]
+    )
+
+    @feedback.deliver
+    redirect_to root_url
+  end
+
   protected
 
     def current_page

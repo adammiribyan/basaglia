@@ -10,6 +10,11 @@ ru:
       # html: '<abbr title="required">*</abbr>'
     error_notification:
       default_message: "Please review the problems below:"
+    labels:
+      defaults:
+        message: ""
+        name: "Ваше имя:"
+        phone_or_email: "Эл. почта или телефон для ответа:"
     # Labels and hints examples
     # labels:
     #   defaults:
