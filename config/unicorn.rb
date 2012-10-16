@@ -1,7 +1,8 @@
-working_directory "/home/basaglia/apps/basaglia/current"
-pid "/home/basaglia/apps/basaglia/tmp/pids/unicorn.pid"
-stderr_path "/home/basaglia/apps/basaglia/current/log/unicorn.log"
-stdout_path "/home/basaglia/apps/basaglia/current/log/unicorn.log"
+root_path = "/home/basaglia/apps/basaglia/current"
+working_directory root_path
+pid "#{root_path}/tmp/pids/unicorn.pid"
+stderr_path "#{root_path}/log/unicorn.log"
+stdout_path "#{root_path}/log/unicorn.log"
 
 listen "/tmp/unicorn.basaglia.sock"
 worker_processes 2

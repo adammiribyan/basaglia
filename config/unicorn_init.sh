@@ -5,11 +5,12 @@ set -e
 
 # Feel free to change any of the following variables for your app:
 TIMEOUT=${TIMEOUT-60}
-APP_ROOT=/home/x/my_app/current
+APP_ROOT=/home/basaglia/apps/basaglia/current
 PID=$APP_ROOT/tmp/pids/unicorn.pid
-CMD="/usr/bin/unicorn -D -c $APP_ROOT/config/unicorn.rb"
-INIT_CONF=$APP_ROOT/config/init.conf
-action="$1"
+CMD="cd $APP_ROOT; bundle exec unicorn -D -c $APP_ROOT/config/unicorn.rb -E production"
+# INIT_CONF=$APP_ROOT/config/init.conf
+# action="$1"
+AS_USER=basaglia
 set -u
 
 test -f "$INIT_CONF" && . $INIT_CONF
